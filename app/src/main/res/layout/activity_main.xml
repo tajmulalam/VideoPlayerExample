@@ -4,13 +4,20 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.educareappsltd.videoplayerexample.MainActivity"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    tools:context="com.educareappsltd.videoplayerexample.MainActivity">
 
     <VideoView
-
         android:id="@+id/myVideoPlayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
 </RelativeLayout>

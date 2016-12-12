@@ -2,11 +2,12 @@ package com.educareappsltd.videoplayerexample;
 
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,8 +26,17 @@ public class MainActivity extends AppCompatActivity {
         myVideoPlayer.setVideoURI(uri);
         myVideoPlayer.requestFocus();
         myVideoPlayer.start();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                Toast.makeText(MainActivity.this, "2nd video", Toast.LENGTH_SHORT).show();
+                Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_two);
+                myVideoPlayer.setVideoURI(uri);
+                myVideoPlayer.requestFocus();
+                myVideoPlayer.start();
+            }
+        }, 6000);
     }
-
 
 
     private void fullScreen() {
