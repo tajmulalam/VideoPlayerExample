@@ -13,6 +13,14 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </SurfaceView>
+
+
     <ImageView
         android:id="@+id/myImageView"
         android:layout_width="100dp"
